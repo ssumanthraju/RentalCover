@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="err_invalid_username_or_password">Username and password do not match any user in this service.</string>
+	<string name="products_title">PRODUCTS</string>
+	<string name="products_SLB_Title">Sauce Labs Backpack</string>
+	<string name="products_SLB_Price">$29.99</string>
+</resources>	

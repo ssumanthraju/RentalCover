@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="2" total="4" passed="2" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-12-29T19:48:53 AEDT" name="Suite" finished-at="2022-12-29T19:50:08 AEDT" duration-ms="75576">
+    <groups>
+    </groups>
+    <test started-at="2022-12-29T19:48:53 AEDT" name="SwagLabs Test" finished-at="2022-12-29T19:50:08 AEDT" duration-ms="75576">
+      <class name="com.qa.tests.ProductTests">
+        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:com.qa.tests.ProductTests@27912e3]" started-at="2022-12-29T19:48:39 AEDT" name="beforeSuite" finished-at="2022-12-29T19:48:53 AEDT" duration-ms="14052" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeSuite -->
+        <test-method is-config="true" signature="beforeClass(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.qa.tests.ProductTests@27912e3]" started-at="2022-12-29T19:48:53 AEDT" name="beforeClass" finished-at="2022-12-29T19:49:27 AEDT" duration-ms="34645" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Android]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Pixel 4]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[emulator-5554]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[pin]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[1504]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:com.qa.tests.ProductTests@27912e3]" started-at="2022-12-29T19:49:27 AEDT" name="beforeMethod" finished-at="2022-12-29T19:49:29 AEDT" duration-ms="1175" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.qa.tests.ProductTests.validateProductOnProductsPage() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="validateProductOnProductsPage()[pri:2, instance:com.qa.tests.ProductTests@27912e3]" started-at="2022-12-29T19:49:29 AEDT" name="validateProductOnProductsPage" finished-at="2022-12-29T19:49:34 AEDT" duration-ms="5423" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateProductOnProductsPage -->
+        <test-method is-config="true" signature="RecordScreen(org.testng.ITestResult)[pri:0, instance:com.qa.tests.ProductTests@27912e3]" started-at="2022-12-29T19:49:34 AEDT" name="RecordScreen" finished-at="2022-12-29T19:49:36 AEDT" duration-ms="2007" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=validateProductOnProductsPage status=SUCCESS method=ProductTests.validateProductOnProductsPage()[pri:2, instance:com.qa.tests.ProductTests@27912e3] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RecordScreen -->
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:com.qa.tests.ProductTests@27912e3]" started-at="2022-12-29T19:49:36 AEDT" name="beforeMethod" finished-at="2022-12-29T19:49:37 AEDT" duration-ms="1022" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.qa.tests.ProductTests.verifyProductDetailsPage() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="verifyProductDetailsPage()[pri:3, instance:com.qa.tests.ProductTests@27912e3]" started-at="2022-12-29T19:49:37 AEDT" name="verifyProductDetailsPage" finished-at="2022-12-29T19:50:03 AEDT" duration-ms="26041" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyProductDetailsPage -->
+        <test-method is-config="true" signature="RecordScreen(org.testng.ITestResult)[pri:0, instance:com.qa.tests.ProductTests@27912e3]" started-at="2022-12-29T19:50:04 AEDT" name="RecordScreen" finished-at="2022-12-29T19:50:07 AEDT" duration-ms="3754" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyProductDetailsPage status=SUCCESS method=ProductTests.verifyProductDetailsPage()[pri:3, instance:com.qa.tests.ProductTests@27912e3] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RecordScreen -->
+        <test-method is-config="true" signature="quitDriver()[pri:0, instance:com.qa.tests.ProductTests@27912e3]" started-at="2022-12-29T19:50:07 AEDT" name="quitDriver" finished-at="2022-12-29T19:50:08 AEDT" duration-ms="969" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quitDriver -->
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:com.qa.tests.ProductTests@27912e3]" started-at="2022-12-29T19:50:08 AEDT" name="afterSuite" finished-at="2022-12-29T19:50:08 AEDT" duration-ms="65" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterSuite -->
+      </class> <!-- com.qa.tests.ProductTests -->
+    </test> <!-- SwagLabs Test -->
+  </suite> <!-- Suite -->
+</testng-results>

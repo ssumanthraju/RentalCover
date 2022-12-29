@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite parallel="false" name="Suite">
+<listeners>
+	<listener class-name="com.qa.listeners.TestNGListener">
+	</listener>
+</listeners>
+	<test name="SwagLabs Test">
+		<parameter name="platformName" value="Android"/>
+		<!-- parameter name="deviceName" value="moto g31"/-->
+		<!-- parameter name="UDID" value="ZD2224PQV2"/-->
+		<parameter name="deviceName" value="Pixel 4"/>
+		<parameter name="UDID" value="emulator-5554"/>
+		<parameter name="unlockType" value="pin"/>
+		<parameter name="unlockKey"	value="1504"/>
+		<classes>
+			<class name="com.qa.tests.ProductTests">
+				<methods>
+					<exclude name="login"/>
+					<include name="validateProductOnProductsPage"/>
+					<include name="verifyProductDetailsPage"/>					
+					<exclude name="logOut"/>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<!-- Test -->
+</suite>
+<!-- Suite -->
