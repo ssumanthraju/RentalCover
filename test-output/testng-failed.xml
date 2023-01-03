@@ -17,8 +17,10 @@
           <include name="quitDriver"/>
           <include name="validateProductOnProductsPage"/>
           <include name="afterSuite"/>
+          <include name="login"/>
           <include name="beforeSuite"/>
           <include name="beforeMethod"/>
+          <include name="logOut"/>
           <include name="RecordScreen"/>
           <include name="verifyProductDetailsPage"/>
         </methods>

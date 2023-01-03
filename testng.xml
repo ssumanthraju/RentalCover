@@ -16,10 +16,10 @@
 		<classes>
 			<class name="com.qa.tests.ProductTests">
 				<methods>
-					<exclude name="login"/>
+					<include name="login"/>
 					<include name="validateProductOnProductsPage"/>
 					<include name="verifyProductDetailsPage"/>					
-					<exclude name="logOut"/>
+					<include name="logOut"/>
 				</methods>
 			</class>
 		</classes>

@@ -96,8 +96,9 @@ public class BaseTest {
 		  caps.setCapability("appPackage", props.getProperty("androidAppPackage"));
 		  caps.setCapability("appActivity", props.getProperty("androidAppActivity"));
 		  
-		  caps.setCapability("unlockType", unlockType);
-		  caps.setCapability("unlockKey", unlockKey);
+		  caps.setCapability("avd", "Pixel4");
+		  
+		  
 		  URL appURL = getClass().getClassLoader().getResource(props.getProperty("androidAppLocation"));
 		  File file = Paths.get(appURL.toURI()).toFile();	  
 		  
@@ -105,7 +106,12 @@ public class BaseTest {
 		  //caps.setCapability(MobileCapabilityType.APP, file.getAbsolutePath());
 		  //caps.setCapability(MobileCapabilityType.APP, "C:\\Users\\suman\\eclipse-workspace\\TDDFramework\\target\\test-classes\\app\\Android.SauceLabs.Mobile.Sample.app.2.7.1.apk");
 		  
-		  URL url = new URL(props.getProperty("appiumURL")); 
+		  URL url = new URL(props.getProperty("appiumURL"));
+		  
+		  caps.setCapability("unlockType", "pin");
+		  caps.setCapability("unlockKey", "1504");
+		  //caps.setCapability("avdLaunchTimeout", "120000");
+		  
 		  driver = new AndroidDriver(url,caps); 
 		  commonFunctions.LogData("Created driver");
 	  }catch(Exception e)

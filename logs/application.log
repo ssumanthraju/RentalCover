@@ -1,24 +1,5 @@
-[INFO ] 2022-12-29 20:10:55.313 commonFunctions:55 - Appium server started...
-[INFO ] 2022-12-29 20:11:03.919 commonFunctions:55 - Created driver
-[INFO ] 2022-12-29 20:11:03.946 commonFunctions:55 - Launching application:com.swaglabsmobileapp
-[INFO ] 2022-12-29 20:11:05.468 ProductTests:130 - 
- ********Starting test:validateProductOnProductsPage***********
+[INFO ] 2023-01-03 13:47:08.059 commonFunctions:55 - Appium server started...
+[INFO ] 2023-01-03 13:47:42.746 commonFunctions:55 - Launching application:com.swaglabsmobileapp
+[INFO ] 2023-01-03 13:47:43.877 ProductTests:130 - 
+ ********Starting test:login***********
 
-[INFO ] 2022-12-29 20:11:05.608 commonFunctions:55 - Deep Link URI executed: swaglabs://swag-overview/0,1
-[INFO ] 2022-12-29 20:11:05.611 commonFunctions:55 - waiting for element to be visible:Located by By.chained({By.xpath: (//android.widget.TextView[@content-desc="test-Item title"])[1]})
-[INFO ] 2022-12-29 20:11:07.561 commonFunctions:55 - waiting for element to be visible:Located by By.chained({By.xpath: (//android.widget.TextView[@content-desc="test-Price"])[1]})
-[INFO ] 2022-12-29 20:11:08.437 commonFunctions:55 - Closing application...
-[INFO ] 2022-12-29 20:11:09.889 ProductTests:130 - 
- ********Starting test:verifyProductDetailsPage***********
-
-[INFO ] 2022-12-29 20:11:10.855 commonFunctions:55 - Deep Link URI executed: swaglabs://swag-overview/0,1
-[INFO ] 2022-12-29 20:11:10.857 commonFunctions:55 - waiting for element to be visible:Located by By.chained({By.xpath: (//android.widget.TextView[@content-desc="test-Item title"])[1]})
-[INFO ] 2022-12-29 20:11:14.117 commonFunctions:55 - Sauce Labs Backpack clicked.
-[INFO ] 2022-12-29 20:11:14.386 commonFunctions:55 - waiting for element to be visible:Located by By.chained({By.xpath: //android.view.ViewGroup[@content-desc="test-Description"]/android.widget.TextView[1]})
-[INFO ] 2022-12-29 20:11:19.969 commonFunctions:55 - waiting for element to be visible:Located by By.chained({AppiumBy.accessibilityId: test-Price})
-[INFO ] 2022-12-29 20:11:20.083 commonFunctions:55 - waiting for element to be visible:Located by By.chained({By.xpath: //android.view.ViewGroup[@content-desc="test-BACK TO PRODUCTS"]/android.widget.TextView})
-[INFO ] 2022-12-29 20:11:20.564 commonFunctions:55 - BACK TO PRODUCTS clicked.
-[INFO ] 2022-12-29 20:11:20.807 commonFunctions:55 - Closing application...
-[INFO ] 2022-12-29 20:11:21.264 commonFunctions:55 - Closing application...
-[INFO ] 2022-12-29 20:11:21.338 commonFunctions:55 - Quitting session...
-[INFO ] 2022-12-29 20:11:21.714 ProductTests:156 - Appium server stopped

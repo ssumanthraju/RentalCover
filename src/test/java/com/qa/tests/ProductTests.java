@@ -75,14 +75,14 @@ public class ProductTests {
 	  }
 	@Test(priority=1)
 	public void login() throws Exception{
-		//productsPage = loginPage.Login(jsonObj.getJSONObject("validcredentials").getString("username"),jsonObj.getJSONObject("validcredentials").getString("password"));
+		productsPage = loginPage.Login(jsonObj.getJSONObject("validcredentials").getString("username"),jsonObj.getJSONObject("validcredentials").getString("password"));
 		
-		ProductsPage productsPage = new ProductsPage();
+		//ProductsPage productsPage = new ProductsPage();
 	}
 	
 	@Test(priority=2)
 	public void validateProductOnProductsPage() throws Exception {			
-			commonFunctions.OpenDeepLinkURI("swaglabs://swag-overview/0,1", "com.swaglabsmobileapp");
+			//commonFunctions.OpenDeepLinkURI("swaglabs://swag-overview/0,1", "com.swaglabsmobileapp");
 			//SoftAssert sa = new SoftAssert();
 			 String SLBTitle =  productsPage.getSLBTitle();
 			 String SLBPrice = productsPage.getSLBPrice();
@@ -94,7 +94,7 @@ public class ProductTests {
 	@Test(priority=3)
 	public void verifyProductDetailsPage() throws Exception
 	{		
-		    commonFunctions.OpenDeepLinkURI("swaglabs://swag-overview/0,1", "com.swaglabsmobileapp");
+		    //commonFunctions.OpenDeepLinkURI("swaglabs://swag-overview/0,1", "com.swaglabsmobileapp");
 			productDetailsPage = productsPage.clickSLBTitle();
 			String actual_productDetailsTxt = productDetailsPage.GetslbTitle();
 			String expected_productDetailsTxt = BaseTest.Hash_strings.get("products_SLB_Title");
