@@ -142,16 +142,18 @@ public class ProductTests {
 		FileOutputStream outputstream = new FileOutputStream(videoDir+File.separator+result.getName()+".mp4");
 		outputstream.write(org.apache.commons.net.util.Base64.decodeBase64(media));
 	*/
-		 base.closeApp();
+		 //base.closeApp();
 	}
 	@AfterClass
 	  public void quitDriver() {
-		  base.closeApp();
-		  base.quitDriver();
+		  //base.closeApp();
+		  //base.quitDriver();
 	  }
 	@AfterSuite
 	  public void afterSuite()
 	  {
+		base.closeApp();
+		base.quitDriver();
 		  BaseTest.server.stop();
 		  commonFunctions.log().info("Appium server stopped");
 	  }
