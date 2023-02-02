@@ -17,11 +17,6 @@ import org.jdom2.Document;
 import org.jdom2.Element;
 import org.jdom2.input.SAXBuilder;
 
-import com.aventstack.extentreports.Status;
-import com.qa.BaseTest;
-import com.qa.reports.ExtentReport;
-
-
 public class commonFunctions {
 	private static final String filename = "src/test/resources/Strings/Strings.xml";
 	public Hashtable<String,String> ReadXMLDOMParser() throws Exception {
@@ -53,28 +48,22 @@ public class commonFunctions {
 	public static void LogData(String message)
 	{
 		log().info(message);
-		if(ExtentReport.getTest()!=null)
-		ExtentReport.getTest().log(Status.INFO, message);
 	}
 	
 	public static void LoglevelData(Level level,String message)
 	{
 		switch (level) {
 		case INFO:
-				log().info(message);
-				ExtentReport.getTest().log(Status.INFO, message);			
+				log().info(message);	
 			break;
 		case DEBUG:
 				log().debug(message);
-				ExtentReport.getTest().log(Status.DEBUG, message);
 				break;
 		case ERROR:
 				log().error(message);
-				ExtentReport.getTest().log(Status.ERROR, message);
 				break;
 		case WARNING:
 				log().warn(message);
-				ExtentReport.getTest().log(Status.WARNING,message);
 				break;
 		default:
 			break;
@@ -82,16 +71,7 @@ public class commonFunctions {
 	}
 	
 	public static Logger log() {
-		return LogManager.getLogger(Thread.currentThread().getStackTrace()[2].getClassName());
+		return LogManager.getLogger((Thread.currentThread().getStackTrace()[2]).getClassName());
 	}
-	
-	public static void OpenDeepLinkURI(String URL, String appPackage) {
-		HashMap<String, String> deepURL = new HashMap<>();
-		deepURL.put("url", URL);
-		deepURL.put("package", appPackage);
-		BaseTest.GetDriver().executeScript("mobile:deepLink", deepURL);
-		LogData("Deep Link URI executed: "+URL);
-	}
-	
 	
 }

@@ -1,36 +1,12 @@
-[INFO ] 2023-01-03 14:35:56.079 commonFunctions:55 - Appium server started...
-[INFO ] 2023-01-03 14:36:08.355 commonFunctions:55 - Created driver
-[INFO ] 2023-01-03 14:36:08.428 commonFunctions:55 - Launching application:com.swaglabsmobileapp
-[INFO ] 2023-01-03 14:36:10.188 ProductTests:130 - 
- ********Starting test:login***********
-
-[INFO ] 2023-01-03 14:36:10.379 commonFunctions:55 - waiting for element to be visible:Located by By.chained({AppiumBy.accessibilityId: test-Username})
-[INFO ] 2023-01-03 14:36:11.716 commonFunctions:55 - Located by By.chained({AppiumBy.accessibilityId: test-Username}) is keyed with text:standard_user
-[INFO ] 2023-01-03 14:36:11.717 commonFunctions:55 - waiting for element to be visible:Located by By.chained({AppiumBy.accessibilityId: test-Password})
-[INFO ] 2023-01-03 14:36:12.930 commonFunctions:55 - Located by By.chained({AppiumBy.accessibilityId: test-Password}) is keyed with text:secret_sauce
-[INFO ] 2023-01-03 14:36:12.930 commonFunctions:55 - waiting for element to be visible:Located by By.chained({AppiumBy.accessibilityId: test-LOGIN})
-[INFO ] 2023-01-03 14:36:13.501 commonFunctions:55 -  clicked.
-[INFO ] 2023-01-03 14:36:14.885 ProductTests:130 - 
- ********Starting test:validateProductOnProductsPage***********
-
-[INFO ] 2023-01-03 14:36:14.887 commonFunctions:55 - waiting for element to be visible:Located by By.chained({By.xpath: (//android.widget.TextView[@content-desc="test-Item title"])[1]})
-[INFO ] 2023-01-03 14:36:17.067 commonFunctions:55 - waiting for element to be visible:Located by By.chained({By.xpath: (//android.widget.TextView[@content-desc="test-Price"])[1]})
-[INFO ] 2023-01-03 14:36:18.357 ProductTests:130 - 
- ********Starting test:verifyProductDetailsPage***********
-
-[INFO ] 2023-01-03 14:36:18.358 commonFunctions:55 - waiting for element to be visible:Located by By.chained({By.xpath: (//android.widget.TextView[@content-desc="test-Item title"])[1]})
-[INFO ] 2023-01-03 14:36:18.908 commonFunctions:55 - Sauce Labs Backpack clicked.
-[INFO ] 2023-01-03 14:36:19.233 commonFunctions:55 - waiting for element to be visible:Located by By.chained({By.xpath: //android.view.ViewGroup[@content-desc="test-Description"]/android.widget.TextView[1]})
-[INFO ] 2023-01-03 14:36:25.419 commonFunctions:55 - waiting for element to be visible:Located by By.chained({AppiumBy.accessibilityId: test-Price})
-[INFO ] 2023-01-03 14:36:25.523 commonFunctions:55 - waiting for element to be visible:Located by By.chained({By.xpath: //android.view.ViewGroup[@content-desc="test-BACK TO PRODUCTS"]/android.widget.TextView})
-[INFO ] 2023-01-03 14:36:25.926 commonFunctions:55 - BACK TO PRODUCTS clicked.
-[INFO ] 2023-01-03 14:36:27.179 ProductTests:130 - 
- ********Starting test:logOut***********
-
-[INFO ] 2023-01-03 14:36:27.182 commonFunctions:55 - waiting for element to be visible:Located by By.chained({By.xpath: //android.view.ViewGroup[@content-desc="test-Menu"]/android.view.ViewGroup/android.widget.ImageView})
-[INFO ] 2023-01-03 14:36:27.545 commonFunctions:55 -  clicked.
-[INFO ] 2023-01-03 14:36:27.691 commonFunctions:55 - waiting for element to be visible:Located by By.chained({AppiumBy.accessibilityId: test-LOGOUT})
-[INFO ] 2023-01-03 14:36:29.309 commonFunctions:55 -  clicked.
-[INFO ] 2023-01-03 14:36:29.551 commonFunctions:55 - Closing application...
-[INFO ] 2023-01-03 14:36:29.897 commonFunctions:55 - Quitting session...
-[INFO ] 2023-01-03 14:36:30.170 ProductTests:158 - Appium server stopped
+[INFO ] 2023-02-02 20:03:39.937 commonFunctions:50 - Select or type Country is clicked.
+[INFO ] 2023-02-02 20:03:41.150 commonFunctions:50 - Accept Cookies is clicked.
+[INFO ] 2023-02-02 20:03:41.333 commonFunctions:50 - Select or type a country is keyed with text:United States
+[INFO ] 2023-02-02 20:03:41.475 commonFunctions:50 - Change-Country Of Residence is clicked.
+[INFO ] 2023-02-02 20:03:42.167 commonFunctions:50 - Country of Residence is keyed with text:United States
+[INFO ] 2023-02-02 20:03:42.308 commonFunctions:50 - From Date is clicked.
+[INFO ] 2023-02-02 20:03:42.540 commonFunctions:50 - Next Month is clicked.
+[INFO ] 2023-02-02 20:03:43.068 commonFunctions:50 - To Date is clicked.
+[INFO ] 2023-02-02 20:03:43.834 commonFunctions:50 - Change-RentVehicle is clicked.
+[INFO ] 2023-02-02 20:03:44.557 commonFunctions:50 - Car is selected with value:Car
+[INFO ] 2023-02-02 20:03:47.716 commonFunctions:50 - Submit Quote is clicked.
+[INFO ] 2023-02-02 20:03:47.780 commonFunctions:50 - Quitting session...
