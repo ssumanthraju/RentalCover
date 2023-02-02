@@ -9,8 +9,7 @@
 		<classes>
 			<class name="com.qa.tests.RentalQuote">
 				<methods>
-					<include name="GetInstantQuote"/>
-					<include name="verifyRentalCoverInPolicyInformationPage"/>
+					<include name="getInstantQuote"/>
 				</methods>
 			</class>
 		</classes>

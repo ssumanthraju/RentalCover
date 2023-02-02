@@ -34,8 +34,8 @@ public class RentalQuote {
   public void beforeClass() {
 	  try {
 		  base = new Base();
-		  base.InitialiseDriver();
-		  base.LoadStrings();
+		  base.initialiseDriver();
+		  base.loadStrings();
 		  
 		  String input_InstantQuote = "data/InstantQuote.json";
 		  io = getClass().getClassLoader().getResourceAsStream(input_InstantQuote);
@@ -55,10 +55,10 @@ public class RentalQuote {
   }
   
   @Test(priority = 1)
-  public void GetInstantQuote() throws JSONException, InterruptedException, ParseException {
+  public void getInstantQuote() throws JSONException, InterruptedException, ParseException {
 	  //homePg.EnterCountry(jsonObj.getJSONObject("InstantQuote").getString("country")); 
 	  homePg.clickCountry(); //Click the country field
-	  homePg.AcceptCookies(); //Accept Cookies button on the pop up displayed
+	  homePg.acceptCookies(); //Accept Cookies button on the pop up displayed
 	  homePg.selectRentingCountry(jsonObj.getJSONObject("InstantQuote").getString("country"));
 	  homePg.click_Change_CountryofResidence();
 	  //Thread.sleep(2000);
@@ -66,17 +66,13 @@ public class RentalQuote {
 	  homePg.selectCountryOfResidence(jsonObj.getJSONObject("InstantQuote").getString("country"));
 	  homePg.clickFromDate(jsonObj.getJSONObject("InstantQuote").getString("fromDate"));
 	  homePg.clickToDate(jsonObj.getJSONObject("InstantQuote").getString("toDate"));
-	  homePg.click_Change_RentingVehicle();
+	  homePg.clickChangeRentingVehicle();
 	  homePg.select_RentingVehicle(jsonObj.getJSONObject("InstantQuote").getString("rentVehicle"));
-	  policyInfoPg = homePg.GetInstantQuote();
-  }
-  @Test(priority=2)
-  public void verifyRentalCoverInPolicyInformationPage() {
+	  policyInfoPg = homePg.getInstantQuote();
 	  
-	  String actualRentalCoverTxt = policyInfoPg.Get_RentalCoverText();	  
+	  String actualRentalCoverTxt = policyInfoPg.getRentalCoverText();	  
 	  String expectedRentalCoverTxt = base.Hash_strings.get("validateRentalCoverageTxt");
-	  if(actualRentalCoverTxt.contains(expectedRentalCoverTxt)) Assert.assertEquals(true, true);
-	  else Assert.assertEquals(true, false);
+	  Assert.assertTrue(actualRentalCoverTxt.contains(expectedRentalCoverTxt));
   }
   
   @AfterClass

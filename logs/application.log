@@ -1,12 +1,11 @@
-[INFO ] 2023-02-02 20:03:39.937 commonFunctions:50 - Select or type Country is clicked.
-[INFO ] 2023-02-02 20:03:41.150 commonFunctions:50 - Accept Cookies is clicked.
-[INFO ] 2023-02-02 20:03:41.333 commonFunctions:50 - Select or type a country is keyed with text:United States
-[INFO ] 2023-02-02 20:03:41.475 commonFunctions:50 - Change-Country Of Residence is clicked.
-[INFO ] 2023-02-02 20:03:42.167 commonFunctions:50 - Country of Residence is keyed with text:United States
-[INFO ] 2023-02-02 20:03:42.308 commonFunctions:50 - From Date is clicked.
-[INFO ] 2023-02-02 20:03:42.540 commonFunctions:50 - Next Month is clicked.
-[INFO ] 2023-02-02 20:03:43.068 commonFunctions:50 - To Date is clicked.
-[INFO ] 2023-02-02 20:03:43.834 commonFunctions:50 - Change-RentVehicle is clicked.
-[INFO ] 2023-02-02 20:03:44.557 commonFunctions:50 - Car is selected with value:Car
-[INFO ] 2023-02-02 20:03:47.716 commonFunctions:50 - Submit Quote is clicked.
-[INFO ] 2023-02-02 20:03:47.780 commonFunctions:50 - Quitting session...
+[INFO ] 2023-02-02 23:22:16.157 commonFunctions:50 - Select or type Country is clicked.
+[INFO ] 2023-02-02 23:22:17.323 commonFunctions:50 - Accept Cookies is clicked.
+[INFO ] 2023-02-02 23:22:17.526 commonFunctions:50 - Select or type a country is keyed with text:United States
+[INFO ] 2023-02-02 23:22:17.702 commonFunctions:50 - Change-Country Of Residence is clicked.
+[INFO ] 2023-02-02 23:22:18.434 commonFunctions:50 - Country of Residence is keyed with text:United States
+[INFO ] 2023-02-02 23:22:18.608 commonFunctions:50 - From Date is clicked.
+[INFO ] 2023-02-02 23:22:18.856 commonFunctions:50 - Next Month is clicked.
+[INFO ] 2023-02-02 23:22:20.004 commonFunctions:50 - Change-RentVehicle is clicked.
+[INFO ] 2023-02-02 23:22:20.713 commonFunctions:50 - Car is selected with value:Car
+[INFO ] 2023-02-02 23:22:23.632 commonFunctions:50 - Submit Quote is clicked.
+[INFO ] 2023-02-02 23:22:25.246 commonFunctions:50 - Quitting session...

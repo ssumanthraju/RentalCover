@@ -38,32 +38,28 @@ public class Base {
     //public static Logger log = LogManager.getLogger(BaseTest.class.getName()); 
     
     
-    public void LoadStrings() throws Exception {
+    public void loadStrings() throws Exception {
     	commFunc = new commonFunctions();
-    	Hash_strings = commFunc.ReadXMLDOMParser();
+    	Hash_strings = commFunc.readXMLDOMParser();
     }
     
     //Implement Getters and Setters
-    public void SetDriver(RemoteWebDriver driver)
+    public void setDriver(RemoteWebDriver driver)
     {
     	this.driver=driver;
     }
-    public static WebDriver GetDriver() {
+    public static WebDriver getDriver() {
     	return driver;
     }     
     
-	public void InitialiseDriver() throws IOException, URISyntaxException {
+	public void initialiseDriver() throws IOException, URISyntaxException {
     		DesiredCapabilities caps;
     		props = new Properties();
     		String PropertyFileName = "config.properties";
     		inputstream = getClass().getClassLoader().getResourceAsStream(PropertyFileName);
     		props.load(inputstream);
-    		
-    		
     		URL chromeDriverLocation = getClass().getClassLoader().getResource(props.getProperty("chromeDriverLocation"));
-  		  	File file = Paths.get(chromeDriverLocation.toURI()).toFile();	  
-  		  
-  		  	System.out.println(file.getAbsolutePath());    		
+  		  	File file = Paths.get(chromeDriverLocation.toURI()).toFile();	      		
     		System.setProperty("webdriver.chrome.driver", file.getAbsolutePath());
     		
     		ChromeOptions options = new ChromeOptions();
@@ -77,59 +73,59 @@ public class Base {
     		driver.get(props.getProperty("URL"));
     } 
 
-	public void WaitForElementToBeVisible(WebElement element)
+	public void waitForElementToBeVisible(WebElement element)
 	  {
-		  WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+		  WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(TestUtils.WAIT));
 		  wait.until(ExpectedConditions.visibilityOf(element));
 	  }
   
-	  public void ClickElement(WebElement element,String friendlyName)
+	  public void clickElement(WebElement element,String friendlyName)
 	  {
-		  WaitForElementToBeVisible(element);	  
+		  waitForElementToBeVisible(element);	  
 		  element.click();
-		  commonFunctions.LogData(friendlyName + " is clicked.");
+		  commonFunctions.logData(friendlyName + " is clicked.");
 	  }
 	  
-	  public void SelectElement(WebElement element,String value) {
-		  WaitForElementToBeVisible(element);
+	  public void selectElement(WebElement element,String value) {
+		  waitForElementToBeVisible(element);
 		  Select selectElement = new Select(element);
 		  selectElement.selectByVisibleText(value);
-		  commonFunctions.LogData(element.getText() + " is selected with value:"+value);
+		  commonFunctions.logData(element.getText() + " is selected with value:"+value);
 	  }
   
-	  public void SendKeys(WebElement element,String friendlyName, String text)
+	  public void sendKeys(WebElement element,String friendlyName, String text)
 	  {
-		 WaitForElementToBeVisible(element);
-		 JavascriptExecutor j = (JavascriptExecutor)GetDriver();
+		 waitForElementToBeVisible(element);
+		 JavascriptExecutor j = (JavascriptExecutor)getDriver();
 		 j.executeScript("arguments[0].value='';", element);
 		 element.sendKeys(text);
-		 commonFunctions.LogData(friendlyName + " is keyed with text:"+text);
+		 commonFunctions.logData(friendlyName + " is keyed with text:"+text);
 	  }
-	  public String GetAttribute(WebElement element,String attribute)
+	  public String getAttribute(WebElement element,String attribute)
 	  {
 		  try {
-			  WaitForElementToBeVisible(element);
+			  waitForElementToBeVisible(element);
 			  return element.getAttribute(attribute);  
 		  }catch(Exception e)
 		  {
-			  commonFunctions.LoglevelData(java.lang.System.Logger.Level.WARNING, "Unable to fetch attribute for element:"+element);
+			  commonFunctions.loglevelData(java.lang.System.Logger.Level.WARNING, "Unable to fetch attribute for element:"+element);
 			  return "false";
 		  }
 	  }
-	  public String GetElementText(WebElement element)
+	  public String getElementText(WebElement element)
 	  {
 		  try {
-			  WaitForElementToBeVisible(element);
+			  waitForElementToBeVisible(element);
 			  return element.getText();
 		  }catch(Exception e)
 		  {
-			  commonFunctions.LoglevelData(java.lang.System.Logger.Level.WARNING, "Unable to fetch text for element:"+element);
+			  commonFunctions.loglevelData(java.lang.System.Logger.Level.WARNING, "Unable to fetch text for element:"+element);
 			  return "false";
 		  }
 	  }  
   
 	  public void quitDriver() {
-		  commonFunctions.LogData("Quitting session...");
+		  commonFunctions.logData("Quitting session...");
 		  //driver.close();
 		  driver.quit();
 	  }  

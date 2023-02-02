@@ -19,7 +19,7 @@ import org.jdom2.input.SAXBuilder;
 
 public class commonFunctions {
 	private static final String filename = "src/test/resources/Strings/Strings.xml";
-	public Hashtable<String,String> ReadXMLDOMParser() throws Exception {
+	public Hashtable<String,String> readXMLDOMParser() throws Exception {
 		
 		Hashtable<String, String> HashTbl_Strings = new Hashtable<String, String>();
 		SAXBuilder sax = new SAXBuilder();
@@ -45,12 +45,12 @@ public class commonFunctions {
 		return dateFormat.format(date);
 	}
 	
-	public static void LogData(String message)
+	public static void logData(String message)
 	{
 		log().info(message);
 	}
 	
-	public static void LoglevelData(Level level,String message)
+	public static void loglevelData(Level level,String message)
 	{
 		switch (level) {
 		case INFO:

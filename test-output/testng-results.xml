@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-02-02T23:22:10 AEDT" name="Suite" finished-at="2023-02-02T23:22:25 AEDT" duration-ms="14507">
+    <groups>
+    </groups>
+    <test started-at="2023-02-02T23:22:10 AEDT" name="Rental Cover" finished-at="2023-02-02T23:22:25 AEDT" duration-ms="14507">
+      <class name="com.qa.tests.RentalQuote">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:com.qa.tests.RentalQuote@5b218417]" started-at="2023-02-02T23:22:10 AEDT" name="beforeClass" finished-at="2023-02-02T23:22:16 AEDT" duration-ms="5114" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:com.qa.tests.RentalQuote@5b218417]" started-at="2023-02-02T23:22:16 AEDT" name="beforeMethod" finished-at="2023-02-02T23:22:16 AEDT" duration-ms="17" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.qa.tests.RentalQuote.getInstantQuote() throws org.json.JSONException,java.lang.InterruptedException,java.text.ParseException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="getInstantQuote()[pri:1, instance:com.qa.tests.RentalQuote@5b218417]" started-at="2023-02-02T23:22:16 AEDT" name="getInstantQuote" finished-at="2023-02-02T23:22:25 AEDT" duration-ms="9205" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getInstantQuote -->
+        <test-method is-config="true" signature="quitDriver()[pri:0, instance:com.qa.tests.RentalQuote@5b218417]" started-at="2023-02-02T23:22:25 AEDT" name="quitDriver" finished-at="2023-02-02T23:22:25 AEDT" duration-ms="132" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quitDriver -->
+      </class> <!-- com.qa.tests.RentalQuote -->
+    </test> <!-- Rental Cover -->
+  </suite> <!-- Suite -->
+</testng-results>

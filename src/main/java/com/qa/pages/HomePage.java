@@ -25,34 +25,70 @@ public class HomePage {
 		base = new Base();
 		PageFactory.initElements(base.driver,this);
 	}
+	//Page Factory Elements
+	@FindBy(xpath = "(//input[@placeholder='Select or type a country'])[1]")  
+	WebElement countryFld;
 	
-	@FindBy(xpath = "(//input[@placeholder='Select or type a country'])[1]")  WebElement countryFld;
-	@FindBy(xpath = "(//button[contains(text(),'ACCEPT')])[1]") WebElement acceptCookies;
-	@FindBy(xpath = "//ul[@id='ui-id-1']/li/div") List<WebElement> CountryList_RentingVehicle;
-	@FindBy(xpath = "//ul[@id='ui-id-5']/li") List<WebElement> CountryList_CountryOfResidence;
-	@FindBy(xpath = "//div[@class='ui-menu-item-wrapper'][1]") WebElement CountrySelect;
-	@FindBy(xpath = "//strong[contains(text(),'change')]//ancestor::div[contains(text(),'I live in:')]") WebElement Change_CountryOfResidence;
-	@FindBy(xpath = "//strong[contains(text(),'change')]//ancestor::div[contains(text(),'renting')]") WebElement Change_RentingVehicle;
-	@FindBy(xpath = "(//input[@placeholder='Type a country'])[1]") WebElement inputCountryOfResidence;
-	@FindBy(xpath = "//input[@id='QuoteForm_FromDate-datepicker']") WebElement FromDate;
-	@FindBy(xpath = "//input[@id='QuoteForm_ToDate-datepicker']") WebElement ToDate;
+	@FindBy(xpath = "(//button[contains(text(),'ACCEPT')])[1]") 
+	WebElement acceptCookies;
 	
-	@FindBy(xpath = "(//div[@class='ui-datepicker-group ui-datepicker-group-first'])[1]/div[1]") WebElement datePickerGroupFirst;
-	@FindBy(xpath = "(//div[@class='ui-datepicker-group ui-datepicker-group-last'])[1]/div[1]") WebElement datePickerGroupLast;
-	@FindBy(xpath = "//div[@class='ui-datepicker-group ui-datepicker-group-first']/table[@class='ui-datepicker-calendar']//td[@data-handler='selectDay']") List<WebElement> datePickerFirst_Days;
-	@FindBy(xpath = "//div[@class='ui-datepicker-group ui-datepicker-group-last']/table[@class='ui-datepicker-calendar']//td[@data-handler='selectDay']") List<WebElement> datePickerLast_Days;
-	@FindBy(xpath = "//a[@data-handler='next']") WebElement nextMonth;
-	@FindBy(xpath = "//div[@class='ui-datepicker-group ui-datepicker-group-first']//span[@class='ui-datepicker-month']") WebElement calendarDispFirstMonth;
-	@FindBy(xpath = "//div[@class='ui-datepicker-group ui-datepicker-group-first']//span[@class='ui-datepicker-year']") WebElement calendarDispFirstYear;
-	@FindBy(id = "QuoteForm_VehicleType") WebElement selectRentingVehicle;
-	@FindBy(xpath = "//span[@class='btn-text' and contains(text(),'Instant')]//ancestor::button[@type='submit']") WebElement submitInstantQuote;
+	@FindBy(xpath = "//ul[@id='ui-id-1']/li/div") 
+	List<WebElement> countryList_RentingVehicle;
+	
+	@FindBy(xpath = "//ul[@id='ui-id-5']/li") 
+	List<WebElement> countryList_CountryOfResidence;
+	
+	@FindBy(xpath = "//div[@class='ui-menu-item-wrapper'][1]")
+	WebElement countrySelect;
+	
+	@FindBy(xpath = "//strong[contains(text(),'change')]//ancestor::div[contains(text(),'I live in:')]")
+	WebElement change_CountryOfResidence;
+	
+	@FindBy(xpath = "//strong[contains(text(),'change')]//ancestor::div[contains(text(),'renting')]") 
+	WebElement change_RentingVehicle;
+	
+	@FindBy(xpath = "(//input[@placeholder='Type a country'])[1]") 
+	WebElement inputCountryOfResidence;
+	
+	@FindBy(xpath = "//input[@id='QuoteForm_FromDate-datepicker']") 
+	WebElement fromDate;
+	
+	@FindBy(xpath = "//input[@id='QuoteForm_ToDate-datepicker']") 
+	WebElement toDate;
+	
+	@FindBy(xpath = "(//div[@class='ui-datepicker-group ui-datepicker-group-first'])[1]/div[1]") 
+	WebElement datePickerGroupFirst;
+	
+	@FindBy(xpath = "(//div[@class='ui-datepicker-group ui-datepicker-group-last'])[1]/div[1]") 
+	WebElement datePickerGroupLast;
+	
+	@FindBy(xpath = "//div[@class='ui-datepicker-group ui-datepicker-group-first']/table[@class='ui-datepicker-calendar']//td[@data-handler='selectDay']") 
+	List<WebElement> datePickerFirst_Days;
+	
+	@FindBy(xpath = "//div[@class='ui-datepicker-group ui-datepicker-group-last']/table[@class='ui-datepicker-calendar']//td[@data-handler='selectDay']") 
+	List<WebElement> datePickerLast_Days;
+	
+	@FindBy(xpath = "//a[@data-handler='next']") 
+	WebElement nextMonth;
+	
+	@FindBy(xpath = "//div[@class='ui-datepicker-group ui-datepicker-group-first']//span[@class='ui-datepicker-month']") 
+	WebElement calendarDispFirstMonth;
+	
+	@FindBy(xpath = "//div[@class='ui-datepicker-group ui-datepicker-group-first']//span[@class='ui-datepicker-year']") 
+	WebElement calendarDispFirstYear;
+	
+	@FindBy(id = "QuoteForm_VehicleType") 
+	WebElement selectRentingVehicle;
+	
+	@FindBy(xpath = "//span[@class='btn-text' and contains(text(),'Instant')]//ancestor::button[@type='submit']") 
+	WebElement submitInstantQuote;
 	
 	public HomePage	selectRentingCountry(String Country) throws InterruptedException {
-		base.SendKeys(countryFld,"Select or type a country",Country);
-		Iterator<WebElement> itr = CountryList_RentingVehicle.iterator();
+		base.sendKeys(countryFld,"Select or type a country",Country);
+		Iterator<WebElement> itr = countryList_RentingVehicle.iterator();
 		//Iterate dynamic drop down elements and Click based on input
 		while(itr.hasNext()) {
-			JavascriptExecutor j = (JavascriptExecutor)base.GetDriver();
+			JavascriptExecutor j = (JavascriptExecutor)base.getDriver();
 			j.executeScript("arguments[0].click();", itr.next());
 			break;
 		}		
@@ -60,11 +96,11 @@ public class HomePage {
 	}
 	
 	public HomePage	selectCountryOfResidence(String Country) throws InterruptedException {
-		base.SendKeys(inputCountryOfResidence,"Country of Residence", Country);
-		Iterator<WebElement> itr = CountryList_CountryOfResidence.iterator();
+		base.sendKeys(inputCountryOfResidence,"Country of Residence", Country);
+		Iterator<WebElement> itr = countryList_CountryOfResidence.iterator();
 		//Iterate dynamic drop down elements and Click based on input
 		while(itr.hasNext()) {
-			JavascriptExecutor j = (JavascriptExecutor)base.GetDriver();
+			JavascriptExecutor j = (JavascriptExecutor)base.getDriver();
 			j.executeScript("arguments[0].click();", itr.next());
 			break;
 		}		
@@ -72,23 +108,22 @@ public class HomePage {
 	}
 		
 	public HomePage clickCountry() {
-		base.ClickElement(countryFld,"Select or type Country");
+		base.clickElement(countryFld,"Select or type Country");
 		return this;
 	}
 	
 	public HomePage clickFromDate(String inputDate) throws ParseException {
-		base.ClickElement(FromDate,"From Date");
+		base.clickElement(fromDate,"From Date");
 		selectDateFromCalendar(inputDate);
 		return this;
 	}
 	
 	public HomePage clickToDate(String toDate) throws ParseException {
-		base.ClickElement(ToDate, "To Date");
 		selectDateFromCalendar(toDate);
 		return this;
 	}
 	
-	public void ClickDay(List<WebElement> weList,String Day) {
+	public void clickDay(List<WebElement> weList,String Day) {
 		for(WebElement we:weList) {
 			if(we.getText().trim().equalsIgnoreCase(Day)) {
 				we.click();
@@ -108,8 +143,7 @@ public class HomePage {
 		//compare current date with input date and get months difference
 		DateTimeFormatter df = new DateTimeFormatterBuilder().parseCaseInsensitive().appendPattern("dd-MMM-yyyy").toFormatter(Locale.ENGLISH);
 		LocalDate inputDateLocal = LocalDate.parse(inputDate, df);
-		//LocalDate currentDate = LocalDate.now();
-		
+
 		String CalDispFirstMonth = calendarDispFirstMonth.getText();
 		String CalDispFirstYear = calendarDispFirstYear.getText();
 		
@@ -119,58 +153,52 @@ public class HomePage {
 		String calFirstDate = targetFormat.format(originalInputFormat.parse(CalDispFirstMonth+" "+CalDispFirstYear)).replace(".","");
 		LocalDate calFirstDateLocal = LocalDate.parse(calFirstDate,df);
 		
-		//System.out.println(df.format(calFirstDateLocal));
-		//System.out.println(df.format(inputDateLocal));
-		
 		int DiffMonths = (int)ChronoUnit.MONTHS.between(calFirstDateLocal.withDayOfMonth(1),inputDateLocal.withDayOfMonth(1));
 		
 		String inputMonth_Year = inputMonth +" "+ inputYear;
 		if(DiffMonths==0) { //From date is in current Month
 			if(datePickerGroupFirst.getText().contains(inputMonth_Year))
-				ClickDay(datePickerFirst_Days, Day);
+				clickDay(datePickerFirst_Days, Day);
 		}else if(DiffMonths==1) { //From date is in next Month
 			if(datePickerGroupLast.getText().contains(inputMonth_Year))		
-				ClickDay(datePickerLast_Days, Day);
+				clickDay(datePickerLast_Days, Day);
 		}else if(DiffMonths>1) { //Move to next months until desired input month is found
 			for(int monthIterate=2;monthIterate<=DiffMonths;monthIterate++) {
-				base.ClickElement(nextMonth,"Next Month");				
+				base.clickElement(nextMonth,"Next Month");				
 			}
 			if(datePickerGroupLast.getText().contains(inputMonth_Year))		
-				ClickDay(datePickerLast_Days, Day);
+				clickDay(datePickerLast_Days, Day);
 		}
 		return this;
 	}
 	
-	public HomePage AcceptCookies() {
-		base.ClickElement(acceptCookies,"Accept Cookies");
+	public HomePage acceptCookies() {
+		base.clickElement(acceptCookies,"Accept Cookies");
 		return this;
 	}
 
 	public HomePage click_Change_CountryofResidence() 
 	{
-		base.ClickElement(Change_CountryOfResidence,"Change-Country Of Residence");
+		base.clickElement(change_CountryOfResidence,"Change-Country Of Residence");
 		return this;
 	}
-	public HomePage click_Change_RentingVehicle() throws InterruptedException 
+	public HomePage clickChangeRentingVehicle() throws InterruptedException 
 	{
-		Thread.sleep(500);
-		base.ClickElement(Change_RentingVehicle,"Change-RentVehicle");
+		base.clickElement(change_RentingVehicle,"Change-RentVehicle");
 		return this;
 	}
 	public HomePage select_RentingVehicle(String value)
 	{
-		base.SelectElement(selectRentingVehicle, value);
+		base.selectElement(selectRentingVehicle, value);
 		return this;
 	}
-	public PolicyInformationPage GetInstantQuote() {
-		base.ClickElement(submitInstantQuote,"Submit Quote");
+	public PolicyInformationPage getInstantQuote() {
+		base.clickElement(submitInstantQuote,"Submit Quote");
 		return new PolicyInformationPage();
 	}
 	
-	public HomePage Enter_CountryOfResidence(String CountryOfResidence) {
-		base.SendKeys(inputCountryOfResidence,"Country of Residence", CountryOfResidence);
-		//base.ClickElement(inputCountryOfResidence);		
-		//inputCountryOfResidence.sendKeys("United States");
+	public HomePage enterCountryOfResidence(String CountryOfResidence) {
+		base.sendKeys(inputCountryOfResidence,"Country of Residence", CountryOfResidence);
 		return this;		
 	}
 }
