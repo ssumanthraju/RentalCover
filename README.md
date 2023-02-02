@@ -9,10 +9,10 @@
 
 ###TestData
 1. Modify test data as required. Test data is located in .json file in the below file of project directory.
-	a. src/test/resources/data/InstantQuote.json
+   src/test/resources/data/InstantQuote.json
 
 ####Test Execution Results
 1. Test execution results can be seen either in IDE or in the below path of project directory.
-	a. test-output/emailable-report.html
+   test-output/emailable-report.html
 
 
