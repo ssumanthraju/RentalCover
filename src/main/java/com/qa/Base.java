@@ -126,7 +126,6 @@ public class Base {
   
 	  public void quitDriver() {
 		  commonFunctions.logData("Quitting session...");
-		  //driver.close();
 		  driver.quit();
 	  }  
 }

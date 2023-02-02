@@ -56,23 +56,20 @@ public class RentalQuote {
   
   @Test(priority = 1)
   public void getInstantQuote() throws JSONException, InterruptedException, ParseException {
-	  //homePg.EnterCountry(jsonObj.getJSONObject("InstantQuote").getString("country")); 
 	  homePg.clickCountry(); //Click the country field
 	  homePg.acceptCookies(); //Accept Cookies button on the pop up displayed
-	  homePg.selectRentingCountry(jsonObj.getJSONObject("InstantQuote").getString("country"));
-	  homePg.click_Change_CountryofResidence();
-	  //Thread.sleep(2000);
-	  //homePg.Enter_CountryOfResidence("United States");
-	  homePg.selectCountryOfResidence(jsonObj.getJSONObject("InstantQuote").getString("country"));
-	  homePg.clickFromDate(jsonObj.getJSONObject("InstantQuote").getString("fromDate"));
-	  homePg.clickToDate(jsonObj.getJSONObject("InstantQuote").getString("toDate"));
-	  homePg.clickChangeRentingVehicle();
-	  homePg.select_RentingVehicle(jsonObj.getJSONObject("InstantQuote").getString("rentVehicle"));
-	  policyInfoPg = homePg.getInstantQuote();
+	  homePg.selectRentingCountry(jsonObj.getJSONObject("InstantQuote").getString("country")); //Select country
+	  homePg.click_Change_CountryofResidence(); //Click on Change link
+	  homePg.selectCountryOfResidence(jsonObj.getJSONObject("InstantQuote").getString("country")); //Select Country of Residence
+	  homePg.clickFromDate(jsonObj.getJSONObject("InstantQuote").getString("fromDate")); //Select from date from calendar
+	  homePg.clickToDate(jsonObj.getJSONObject("InstantQuote").getString("toDate")); //Select to date from calendar
+	  homePg.clickChangeRentingVehicle(); //Click change link to change renting vehicle
+	  homePg.select_RentingVehicle(jsonObj.getJSONObject("InstantQuote").getString("rentVehicle")); //Select Rental vehicle
+	  policyInfoPg = homePg.getInstantQuote(); //Submit Quote
 	  
-	  String actualRentalCoverTxt = policyInfoPg.getRentalCoverText();	  
-	  String expectedRentalCoverTxt = base.Hash_strings.get("validateRentalCoverageTxt");
-	  Assert.assertTrue(actualRentalCoverTxt.contains(expectedRentalCoverTxt));
+	  String actualRentalCoverTxt = policyInfoPg.getRentalCoverText(); //Get Actual Rental cover text
+	  String expectedRentalCoverTxt = base.Hash_strings.get("validateRentalCoverageTxt"); //Get expected data
+	  Assert.assertTrue(actualRentalCoverTxt.contains(expectedRentalCoverTxt)); //Assert Rental cover text
   }
   
   @AfterClass
