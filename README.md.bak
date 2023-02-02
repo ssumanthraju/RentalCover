@@ -14,5 +14,6 @@
 ####Test Execution Results
 1. Test execution results can be seen either in IDE or in the below path of project directory.
 	a. test-output/emailable-report.html
+	b. target/surefire-reports/emailable-report.html
 
 
